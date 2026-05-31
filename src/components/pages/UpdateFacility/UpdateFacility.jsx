@@ -1,5 +1,6 @@
 // src/components/pages/UpdateFacility/UpdateFacility.jsx
 "use client";
+export const dynamic = "force-dynamic";
 
 import { useEffect, useState } from "react";
 import { useParams, useRouter } from "next/navigation";
@@ -22,8 +23,8 @@ import ProtectedRoute from "@/components/auth/ProtectedRoute";
 
 const UpdateFacility = () => {
   // Explicit ID Fetch Strategy
-  const params = useParams();
-  const id = params.id;
+const params = useParams();
+const id = params?.id;
   
   const router = useRouter();
 
