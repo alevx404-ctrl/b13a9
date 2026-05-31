@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SportNest
 
-## Getting Started
+## Purpose
 
-First, run the development server:
+SportNest is a sports facility booking platform where users can browse available sports facilities, view detailed information, book available time slots, manage their bookings, and facility owners can manage their facilities.
+
+## Live URL
+
+https://your-live-site-url.com
+
+## Features
+
+* User authentication with Email/Password and Google Login
+* Browse all available sports facilities
+* View detailed facility information
+* Book available facility time slots
+* Automatic prevention of duplicate slot bookings
+* My Bookings page for managing reservations
+* Cancel bookings with ownership verification
+* Add new facilities
+* Update facility information
+* Delete facilities
+* Protected routes for authenticated users
+* Responsive design for mobile, tablet, and desktop devices
+
+## NPM Packages Used
+
+### Frontend
+
+* next
+* react
+* react-dom
+* better-auth
+* react-hot-toast
+* lucide-react
+* tailwindcss
+
+### Backend
+
+* express
+* mongodb
+* cors
+* dotenv
+
+## Installation
+
+### Client
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Server
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```bash
+npm install
+node index.js
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Environment Variables
 
-## Learn More
+### Client
 
-To learn more about Next.js, take a look at the following resources:
+```env
+BETTER_AUTH_SECRET=your_secret
+BETTER_AUTH_URL=your_client_url
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+MONGODB_URI=your_mongodb_connection_string
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Server
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```env
+MONGODB_URI=your_mongodb_connection_string
+PORT=5000
+```
